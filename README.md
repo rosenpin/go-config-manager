@@ -13,14 +13,20 @@
         ...
     }
 ```
-2. Load the configuration
+2. Create the configuration file. IE: config.yaml
+```
+Path: /home/user/projectpath
+Port: 8080
+Username: rosenpin
+```
+3. Load the configuration
 ``` go
-    configLoader := config.NewLoader(configPath)
+configLoader := config.NewLoader("config.yaml")
 
-	config := &models.Config{}
+config := &models.Config{}
 
-	err := configLoader.Load(yaml.Unmarshal, config)
-	if err != nil {
-		panic(err)
-	}
+err := configLoader.Load(yaml.Unmarshal, config) 
+if err != nil {
+    panic(err)
+}
 ```
