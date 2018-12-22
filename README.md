@@ -14,7 +14,7 @@
     }
 ```
 2. Create the configuration file. IE: config.yaml
-```
+``` yaml
 Path: /home/user/projectpath
 Port: 8080
 Username: rosenpin
