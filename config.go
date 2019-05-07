@@ -4,13 +4,13 @@ import (
 	"io/ioutil"
 )
 
-// Unmarshaler is the interface for objects that can
+// Unmarshaler is the interface for objects that can unmarshal data into a target object
 type Unmarshaler func(content []byte, target interface{}) error
 
 // Loader loads the configuration from the configuration file into the configuration object
 type Loader struct{ path string }
 
-// NewLoader creates a new configuration loader object using the provided path
+// NewLoader creates a new configuration loader object using the provided configuration path
 func NewLoader(path string) *Loader {
 	return &Loader{path}
 }
